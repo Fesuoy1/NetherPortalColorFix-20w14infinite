@@ -21,8 +21,8 @@ public class PortalBlockMixin {
     @Inject(method = "onEntityCollision", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/Entity;remove()V", shift = At.Shift.BEFORE))
     public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity, CallbackInfo ci) {
         PortalBlock portalBlock = (PortalBlock) (Object) this;
-        // get the chunk and update it
         BlockEntity blockEntity = world.getBlockEntity(pos);
+
         if ((portalBlock instanceof NeitherPortalBlock || portalBlock instanceof NetherPortalBlock) && blockEntity instanceof NetherPortalBlockEntity) {
             blockEntity.markDirty();
             world.updateListeners(pos, state, state, 3);
