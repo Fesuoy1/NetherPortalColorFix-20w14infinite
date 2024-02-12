@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "package": "org.mod.portal_updater.mixins",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "PortalBlockMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

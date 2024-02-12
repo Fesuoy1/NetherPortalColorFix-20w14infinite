@@ -1,0 +1,33 @@
+{
+	"schemaVersion": 1,
+	"id": "portal_updater-inf",
+	"version": "${version}",
+	"name": "Nether Portal Color Fix",
+	"description": "Fixes the portal texture not changing colors when the written book was thrown in",
+	"authors": [
+		"Fesuoy"
+	],
+	"contact": {
+		"sources": "https://github.com/Fesuoy1/NetherPortalColorFix-20w14infinite/"
+	},
+	"license": "MIT",
+	"icon": "assets/portal_updater-inf/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"org.mod.portal_updater.FixPortalChunkUpdater"
+		],
+		"client": [
+			"org.mod.portal_updater.client.FixPortalChunkUpdaterClient"
+		]
+	},
+	"mixins": [
+		"portal_updater.mixin.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.20",
+		"minecraft": "~1.16-alpha.20.13.inf",
+		"java": ">=8",
+		"fabric": "*"
+	}
+}
